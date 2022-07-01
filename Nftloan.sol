@@ -73,7 +73,7 @@ contract NftLoan{
         loanId++;
     }
 
-    //Other users can view the request details and use this function to lend money
+    //Other users can use this function to lend money to the loan
     function lendMoney(uint _loanId) public payable correctAmount(_loanId) isOpen(_loanId){
         Loan storage loan = loanList[_loanId];
         require(msg.sender != loan.borrower, "You cannot loan yourself");
