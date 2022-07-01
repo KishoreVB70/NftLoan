@@ -3,13 +3,6 @@ pragma solidity ^0.8.2;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-/*
-Todo
-    1)Test if all the current functionality works accordingly
-    2)Add events (Actually learn how to use events today itself)
-    3)Contemplate of adding the concept of interest (Will add it for the celo submission)
-    4)Add hell load of comments
-*/
 
 contract NftLoan{
 
