@@ -2,7 +2,7 @@
 
 - Small Explanation about this Contract
 
-[![Dacade Submission](https://imgur.com/a/YGQRBNP)](https://www.youtube.com/watch?v=jj5OdLeW5N0 "Dacade Submission")
+[![Dacade Submission](https://ipfs.io/ipfs/QmUprJqoTYfiNq426DCyVFcdn5K84whLxL4h9D4CdaX86q?filename=dacade%20submission.jpeg)](https://www.youtube.com/watch?v=jj5OdLeW5N0 "Dacade Submission")
 
 - Users can request for loans by putting up their NFT as collateral 
 - The NFT is transfered to the contract on loan listing
