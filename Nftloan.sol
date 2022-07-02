@@ -67,6 +67,7 @@ contract NftLoan{
     //Function using which the users can make a loan request
     function askForLoan(uint _nftId, address _nft, uint _amount, uint _loanClosingDuration, uint _loanDuration) public{
         IERC721(_nft).transferFrom(msg.sender, address(this), _nftId);
+        //Duration is in minutes for testing purpose
         uint loanClosingTimeStamp = block.timestamp + _loanClosingDuration * 60;
         loanList[loanId] = Loan(_amount,  _nftId, loanClosingTimeStamp, _loanDuration, 0 , _nft,  payable(msg.sender), payable(address(0)), Status.Open );
         emit newLoan(msg.sender, loanId);
@@ -79,6 +80,7 @@ contract NftLoan{
         require(msg.sender != loan.borrower, "You cannot loan yourself");
         require(block.timestamp < loan.loaningTimeEndTimestamp, "Loan open time ended");
         loan.borrower.transfer(loan.amount);
+        //Duration is in minutes for testing purpose
         loan.loanDurationEndTimestamp = block.timestamp + loan.loanDuration * 60;
         loan.lender = payable(msg.sender);
         loan.status = Status.Loaned;
