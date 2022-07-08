@@ -104,7 +104,7 @@ contract NftLoan {
         uint256 _loanDuration
     ) public {
         require(!onLoan[_nft][_nftId], "Nft is currently in a loan");
-        require(_amount > 0, "Amount can't zero");
+        require(_amount > 0, "Amount can't be zero");
         require(_nft != address(0), "Non existent nft contract");
         require(
             _loanDuration > 0 && _loanClosingDuration > 0,
